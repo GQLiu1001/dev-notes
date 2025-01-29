@@ -1,5 +1,7 @@
 # GIT
 
+太sb了 邮箱先是1872写成了2872后面改过来后把@gmail.com写成@gamil.com了
+
 ```
 git add .
 
