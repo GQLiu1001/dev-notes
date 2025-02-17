@@ -74,3 +74,19 @@ GIT_COMMITTER_EMAIL='moondust1196551872@gmail.com'
 git push -f origin master
 ```
 
+
+
+22端口报错
+
+在.ssh目录下新建一个config没后缀
+
+复制以下内容 更改为443接口
+
+```
+
+Host github.com
+  Hostname ssh.github.com
+  Port 443
+
+```
+
