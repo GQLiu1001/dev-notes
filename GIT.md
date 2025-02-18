@@ -1,11 +1,17 @@
 # GIT
 
+一键运行
+
+```
+git add . && git commit -m "dev-note" && git push -u origin main
+```
+
 太sb了 邮箱先是1872写成了2872后面改过来后把@gmail.com写成@gamil.com了
 
 ```
-git add .
-
 git add GIT.md
+
+git add .
 
 git commit -m "dev-note"
 
