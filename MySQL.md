@@ -152,7 +152,7 @@ on
 em.emp_no  = de.emp_no
 ```
 
-### 左连接 LEFT JOIN 内连接 INNER JOIN
+### 左连接 LEFT JOIN 内连接 INNER JOIN 默认内连接
 
 INNER JOIN 两边表同时有对应的数据，即任何一边缺失数据就不显示。
 LEFT JOIN 会读取左边数据表的全部数据，即便右边表无对应数据。
@@ -198,6 +198,10 @@ COUNT(salary) 聚合函数，统计某个字段的非空值数量。 如果只�
 ### 按字段分组GROUP BY
 
 按指定字段分组，将相同 `emp_no` 的记录合并为一行。
+
+使用group by子句时，select子句中只能有聚合键、聚合函数、常数。
+
+gruop by 之后直接查询emp_no默认取非聚合的第一条,不符合某些场景
 
 按 `emp_no` 分组，每个分组对应一个员工的全部薪水记录。
 
@@ -257,3 +261,241 @@ WHERE dm.emp_no IS NULL
 检查 `employees.emp_no` 是否 **不在** 子查询的结果集中。 
 
 如果子查询返回的 `emp_no` 列表中存在 `NULL` 值，`NOT IN` 的逻辑会失效
+
+> 获取所有员工当前的manager
+
+有一个员工表dept_emp简况如下:
+
+| emp_no | dept_no | from_date  | to_date    |
+| ------ | ------- | ---------- | ---------- |
+| 10001  | d001    | 1986-06-26 | 9999-01-01 |
+| 10002  | d001    | 1996-08-03 | 9999-01-01 |
+| 10003  | d002    | 1995-12-03 | 9999-01-01 |
+
+第一行表示为员工编号为10001的部门是d001部门。
+
+有一个部门经理表dept_manager简况如下:
+
+| dept_no | emp_no | from_date  | to_date    |
+| ------- | ------ | ---------- | ---------- |
+| d001    | 10002  | 1996-08-03 | 9999-01-01 |
+| d002    | 10003  | 1990-08-05 | 9999-01-01 |
+
+第一行表示为d001部门的经理是编号为10002的员工。
+
+获取所有的员工和员工对应的经理，如果员工本身是经理的话则不显示
+
+```sql
+select a.emp_no, b.emp_no as manager_no
+from dept_emp as a join dept_manager as b 
+on a.dept_no = b.dept_no
+and a.emp_no != b.emp_no
+```
+
+### AND 关键词
+
+增加条件
+
+### ！= 关键词
+
+不等于的限制条件
+
+### AS 关键词
+
+可以作为别名 也可省略as 本质上输出的都是emp_no
+
+```sql
+select a.emp_no, b.emp_no 
+from dept_emp  a 
+join 
+dept_manager  b 
+on a.dept_no = b.dept_no
+and a.emp_no != b.emp_no
+```
+
+> 获取每个部门中薪水最高的员工相关信息
+
+有一个员工表dept_emp简况如下:
+
+| emp_no | dept_no | from_date  | to_date    |
+| ------ | ------- | ---------- | ---------- |
+| 10001  | d001    | 1986-06-26 | 9999-01-01 |
+| 10002  | d001    | 1996-08-03 | 9999-01-01 |
+| 10003  | d002    | 1996-08-03 | 9999-01-01 |
+
+有一个薪水表salaries简况如下:
+
+| emp_no | salary | from_date  | to_date    |
+| ------ | ------ | ---------- | ---------- |
+| 10001  | 88958  | 2002-06-22 | 9999-01-01 |
+| 10002  | 72527  | 2001-08-02 | 9999-01-01 |
+| 10003  | 92527  | 2001-08-02 | 9999-01-01 |
+
+获取每个部门中薪水最高的员工相关信息，给出dept_no, emp_no以及其对应的salary
+
+```sql
+select
+    dept_no,
+    s.emp_no,
+    salary
+from
+    dept_emp de
+    join salaries s on de.emp_no = s.emp_no
+where
+    (dept_no, salary) in (
+        select
+            dept_no,
+            max(salary)
+        from
+            dept_emp de
+            join salaries s on de.emp_no = s.emp_no
+        group by
+            dept_no
+    )
+order by
+    dept_no
+
+```
+
+### WHERE 子句
+
+- 这里使用了一个子查询来筛选每个部门中薪水最高的员工。子查询的结果必须包含在主查询的 WHERE 条件中。
+- (dept_no, salary) IN (...) 确保我们只选择那些部门编号和薪水组合在子查询结果中的记录。
+
+**子查询**：
+
+- 子查询同样从 dept_emp 和 salaries 表中获取数据，并通过 JOIN 连接。
+- GROUP BY dept_no 对每个部门进行分组。
+- MAX(salary) 用于找出每个部门中最高的薪水。
+
+**ORDER BY**：
+
+- 最后，通过 ORDER BY dept_no 对结果按部门编号进行排序。
+
+### IN关键词
+
+检查某值是否在指定的集合中，在这里用于确保主查询的 dept_no 和 salary 组合在子查询的结果中。
+
+### MAX()关键词
+
+注意需要接group by
+
+### AVG()关键词
+
+```sql
+select
+ti.title , avg(s.salary)
+from
+titles ti
+join
+salaries s
+on
+ti.emp_no  = s.emp_no 
+group by
+ti.title
+order by
+avg(s.salary)
+```
+
+注意需要接group by
+
+### 聚合函数
+
+#### count() sum() avg() max() min()
+
+### 日期函数
+
+#### YEAR() 函数
+
+返回给定日期或日期时间的年份部分。
+
+```sql
+SELECT YEAR('2023-06-15');  -- 返回 2023
+SELECT YEAR(CURDATE());      -- 返回当前年份
+SELECT YEAR(NOW());          -- 返回当前年份
+```
+
+#### MONTH() 函数
+
+返回给定日期或日期时间的月份部分，返回值是1到12之间的整数。
+
+```sql
+SELECT MONTH('2023-06-15'); -- 返回 6
+SELECT MONTH(CURDATE());    -- 返回当前月份
+SELECT MONTH(NOW());        -- 返回当前月份
+```
+
+这些函数可以接受各种日期格式的字符串或MySQL的日期类型（如 DATE, DATETIME, TIMESTAMP）作为参数。
+
+如果传入的参数不是有效的日期或时间格式，函数会返回 NULL。
+
+### 字符串操作函数
+
+#### SUBSTRING() 函数
+
+SUBSTRING(str, pos, [len]) 或 SUBSTRING(str FROM pos FOR len)
+
+从字符串中提取子字符串。
+
+- str 是要操作的字符串。
+- pos 是起始位置（从1开始，不是从0开始）。
+- len 是要提取的长度，可选参数，如果省略，则提取到字符串末尾。
+
+```sql
+SELECT SUBSTRING('abcdefg', 1, 2); -- 返回 'ab'
+SELECT SUBSTRING('abcdefg', 3); -- 返回 'cdefg'
+SELECT SUBSTRING('abcdefg' FROM 2 FOR 3); -- 返回 'bcd' (等同于 SUBSTRING('abcdefg', 2, 3))
+```
+
+SUBSTRING() 通常用于数据清洗、提取特定格式的数据片段或进行字符串操作。
+
+#### CONCAT() 函数
+
+CONCAT(str1, str2, ..., strN)
+
+用于将两个或多个字符串连接起来，形成一个新字符串。
+
+```sql
+SELECT CONCAT('Hello', ' ', 'World'); -- 返回 'Hello World'
+SELECT CONCAT(first_name, ' ', last_name) FROM employees; -- 连接姓和名
+SELECT CONCAT(column1, '-', column2) FROM table_name; -- 使用分隔符连接两个列
+```
+
+如果任何参数为 NULL，结果将是 NULL，除非使用 CONCAT_WS()（带有分隔符的连接函数），它可以忽略 NULL 值。
+
+CONCAT() 常用于生成格式化的字符串，如全名、地址、或日志消息。
+
+### 通配符
+
+% - 代表零个或多个字符。
+
+- 示例：SELECT * FROM users WHERE name LIKE 'J%' 会匹配所有名字以J开头的记录。
+
+_ - 代表单个字符。
+
+- 示例：SELECT * FROM users WHERE name LIKE '_o_' 会匹配名字是三个字符且中间是'o'的记录。
+
+可以将 % 用在 LIKE 子句中，用于模糊匹配：
+
+- % 可以匹配零个或多个字符。
+- % 可以出现在字符串的开头、中间或结尾。
+
+```sql
+SELECT * FROM table WHERE field LIKE 'abc%' -- 获取 field 以 "abc" 开头的所有值
+SELECT * FROM table WHERE field LIKE '%xyz' -- 获取 field 以 "xyz" 结尾的所有值
+SELECT * FROM table WHERE field LIKE '%abc%' -- 获取 field 包含 "abc" 字符串的所有值
+```
+
+如果需要匹配实际的 % 字符，需要使用转义字符，如：
+
+```sql
+SELECT * FROM table WHERE field LIKE '%\%%' ESCAPE '\'
+```
+
+### 单引号  '
+
+主要用于**字符串 **（即字符串常量）的界定。任何需要插入字符串值的地方，都应该使用单引号。
+
+```sql
+SELECT * FROM users WHERE name = 'John Doe';
+```
