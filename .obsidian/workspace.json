@@ -178,11 +178,10 @@
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "obsidian-git:Open Git source control": false,
-      "templater-obsidian:Templater": false
+      "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d217788e515066d9",
+  "active": "ee696a0e5f5db563",
   "lastOpenFiles": [
     "GIT.md",
     "乐尚代驾.md",
