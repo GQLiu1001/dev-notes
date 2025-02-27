@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "677bc57ea1630e73",
+        "id": "22986d2704913d66",
         "type": "tabs",
         "children": [
           {
-            "id": "e2f8cc19683ce5ca",
+            "id": "0e7c401526e8a520",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -183,11 +183,11 @@
   },
   "active": "ee696a0e5f5db563",
   "lastOpenFiles": [
+    "GIT.md",
     "万邦仓储系统.md",
     "万邦笔记.md",
     "万邦接口文档.md",
     "后端软件配置.md",
-    "GIT.md",
     "乐尚代驾.md",
     "Custom Context Menu 设置 WIN11 一级菜单.md",
     "万邦数据库文档.md",
