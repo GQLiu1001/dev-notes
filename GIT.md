@@ -1,6 +1,7 @@
 # GIT
 
 一键运行
+![image.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/imgPc/20250227220211.png)
 
 ```bash
 git add . && git commit -m "dev-note" && git push -u origin main
