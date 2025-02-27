@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "9552d9424f8cc03c",
+        "id": "1c0191b05a006f71",
         "type": "tabs",
         "children": [
           {
-            "id": "965c09e49c9a563e",
+            "id": "fb8ce972f0ec66fc",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "万邦接口文档.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "万邦接口文档"
+              "title": "新标签页"
             }
           }
         ]
@@ -80,13 +76,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "万邦接口文档.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "万邦接口文档 的大纲"
+              "title": "大纲"
             }
           },
           {
@@ -181,10 +176,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ee696a0e5f5db563",
+  "active": "fb8ce972f0ec66fc",
   "lastOpenFiles": [
-    "万邦仓储系统.md",
+    "后端软件配置.md",
     "万邦接口文档.md",
+    "万邦仓储系统.md",
     "GIT.md",
     "乐尚代驾.md",
     "Custom Context Menu 设置 WIN11 一级菜单.md",
@@ -192,7 +188,6 @@
     "万邦数据库文档.md",
     "a.md",
     "2025-02-26.md",
-    "后端软件配置.md",
     "未命名.canvas",
     "MySQL.md",
     "积累面试题.md"
