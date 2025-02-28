@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "万邦接口文档.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
@@ -80,13 +80,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Custom Context Menu 设置 WIN11 一级菜单.md",
+                "file": "万邦接口文档.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Custom Context Menu 设置 WIN11 一级菜单 的大纲"
+              "title": "万邦接口文档 的大纲"
             }
           },
           {
