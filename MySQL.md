@@ -499,3 +499,11 @@ SELECT * FROM table WHERE field LIKE '%\%%' ESCAPE '\'
 ```sql
 SELECT * FROM users WHERE name = 'John Doe';
 ```
+## Mybatis
+### concat
+```sql
+SELECT  
+    SUM(info.adjusted_quantity) AS adjusted_quantity,    SUM(info.adjusted_amount) AS adjusted_amountFROM  
+    order_info infoWHERE  
+    info.order_update_time LIKE CONCAT(#{date}, '%')
+```
