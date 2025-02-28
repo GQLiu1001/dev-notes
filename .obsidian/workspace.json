@@ -99,8 +99,7 @@
               "title": "Source Control"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "horizontal",
@@ -181,7 +180,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ee696a0e5f5db563",
+  "active": "bf7e3c7ef8d63b06",
   "lastOpenFiles": [
     "万邦仓储系统.md",
     "Custom Context Menu 设置 WIN11 一级菜单.md",
