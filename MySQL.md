@@ -507,3 +507,5 @@ SELECT
     order_info infoWHERE  
     info.order_update_time LIKE CONCAT(#{date}, '%')
 ```
+### 时间比较
+![image.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/imgPc/20250301200837.png)
