@@ -507,5 +507,13 @@ SELECT
     order_info infoWHERE  
     info.order_update_time LIKE CONCAT(#{date}, '%')
 ```
-### 时间比较
+### 时间比较可以直接字符串 2025-01
 ![image.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/imgPc/20250301200837.png)
+### 动态set
+![image.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/imgPc/20250302213830.png)
+### 动态if 
+在`<set>`自动拼接`，`
+
+在`where`会自动拼接`and`
+
+为了防止and出错 可以在where后加入 `1=1`
