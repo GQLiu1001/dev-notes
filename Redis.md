@@ -30,3 +30,19 @@ NoSQL 非关系型数据库
 - 存储地理坐标（经纬度），支持附近查询。
 - 适用于 LBS（Location-Based Service）场景，如查找附近的商家/用户。
 ## SpringDataRedis
+### maven依赖
+```xml
+<!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-redis -->
+<dependency>
+<groupId>org.springframework.data</groupId>
+    <artifactId>spring-data-redis</artifactId>
+    <version>3.4.3</version>
+</dependency>
+
+<!-- 连接池https://mvnrepository.com/artifact/org.apache.commons/commons-pool2 -->
+<dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-pool2</artifactId>
+    <version>2.12.1</version>
+</dependency>
+```
