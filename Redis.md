@@ -222,4 +222,15 @@ public class RedisService {
 }
 
 ```
-	
+### 增删改
+| **数据类型** | **增/改** | **查** | **删** |
+|------------|----------------------------------|----------------------------------|----------------------|
+| **String** | `opsForValue().set(key, value)` | `opsForValue().get(key)` | `delete(key)` |
+| **Hash** | `opsForHash().put(hash, key, value)` | `opsForHash().get(hash, key)` / `opsForHash().entries(hash)` | `opsForHash().delete(hash, key)` |
+| **List** | `opsForList().leftPush(key, value)` / `opsForList().rightPush(key, value)` | `opsForList().leftPop(key)` / `opsForList().rightPop(key)` | `delete(key)` |
+| **Set** | `opsForSet().add(key, value)` | `opsForSet().members(key)` | `opsForSet().remove(key, value)` |
+| **ZSet** | `opsForZSet().add(key, value, score)` | `opsForZSet().reverseRange(key, start, end)` | `opsForZSet().remove(key, value)` |
+| **Geo** | `opsForGeo().add(key, point, name)` | `opsForGeo().position(key, name)` / `opsForGeo().distance(key, name1, name2)` | `opsForGeo().remove(key, name)` |
+
+
+
