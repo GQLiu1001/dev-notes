@@ -46,3 +46,180 @@ NoSQL 非关系型数据库
     <version>2.12.1</version>
 </dependency>
 ```
+### 操作示例
+```java
+package com.example.redis.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.geo.*;
+import org.springframework.data.redis.core.*;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
+
+/**
+ * RedisService - 提供对 Redis 的 String、Set、Hash、Geo 和 List 数据类型的基本操作。
+ */
+@Service
+public class RedisService {
+
+    @Autowired
+    private RedisTemplate<String, Object> redisTemplate; // Redis 通用操作
+
+    @Autowired
+    private StringRedisTemplate stringRedisTemplate; // 专门用于 String 类型的操作
+
+    /**
+     * ========== String（字符串）操作 ==========
+     */
+
+    public void setString(String key, String value, long timeout) {
+        stringRedisTemplate.opsForValue().set(key, value);
+        if (timeout > 0) {
+            stringRedisTemplate.expire(key, timeout, TimeUnit.SECONDS);
+        }
+    }
+
+    public String getString(String key) {
+        return stringRedisTemplate.opsForValue().get(key);
+    }
+
+    public void deleteString(String key) {
+        stringRedisTemplate.delete(key);
+    }
+
+    /**
+     * ========== Set（集合）操作 ==========
+     */
+
+    public void addToSet(String key, String... values) {
+        redisTemplate.opsForSet().add(key, (Object[]) values);
+    }
+
+    public Set<Object> getSet(String key) {
+        return redisTemplate.opsForSet().members(key);
+    }
+
+    public boolean isMemberOfSet(String key, String value) {
+        return Boolean.TRUE.equals(redisTemplate.opsForSet().isMember(key, value));
+    }
+
+    public void removeFromSet(String key, String... values) {
+        redisTemplate.opsForSet().remove(key, (Object[]) values);
+    }
+
+    /**
+     * ========== Hash（哈希表）操作 ==========
+     */
+
+    public void setHashValue(String key, String field, Object value) {
+        redisTemplate.opsForHash().put(key, field, value);
+    }
+
+    public Object getHashValue(String key, String field) {
+        return redisTemplate.opsForHash().get(key, field);
+    }
+
+    public Map<Object, Object> getAllHashValues(String key) {
+        return redisTemplate.opsForHash().entries(key);
+    }
+
+    public void deleteHashField(String key, String field) {
+        redisTemplate.opsForHash().delete(key, field);
+    }
+
+    /**
+     * ========== List（列表）操作 ==========
+     */
+
+    /**
+     * 从左侧插入一个或多个元素到列表
+     *
+     * @param key    列表键
+     * @param values 要插入的元素
+     */
+    public void leftPushList(String key, String... values) {
+        redisTemplate.opsForList().leftPushAll(key, (Object[]) values);
+    }
+
+    /**
+     * 从右侧插入一个或多个元素到列表
+     *
+     * @param key    列表键
+     * @param values 要插入的元素
+     */
+    public void rightPushList(String key, String... values) {
+        redisTemplate.opsForList().rightPushAll(key, (Object[]) values);
+    }
+
+    /**
+     * 从左侧弹出一个元素
+     *
+     * @param key 列表键
+     * @return 弹出的元素
+     */
+    public Object leftPopList(String key) {
+        return redisTemplate.opsForList().leftPop(key);
+    }
+
+    /**
+     * 从右侧弹出一个元素
+     *
+     * @param key 列表键
+     * @return 弹出的元素
+     */
+    public Object rightPopList(String key) {
+        return redisTemplate.opsForList().rightPop(key);
+    }
+
+    /**
+     * 获取列表中指定范围的元素
+     *
+     * @param key   列表键
+     * @param start 起始索引（包含）
+     * @param end   结束索引（包含 -1 代表最后一个元素）
+     * @return 列表中的元素
+     */
+    public List<Object> getListRange(String key, long start, long end) {
+        return redisTemplate.opsForList().range(key, start, end);
+    }
+
+    /**
+     * 移除列表中的某个值
+     *
+     * @param key   列表键
+     * @param count 移除的个数（正数从头移除，负数从尾移除，0 移除所有）
+     * @param value 需要移除的值
+     */
+    public void removeFromList(String key, long count, String value) {
+        redisTemplate.opsForList().remove(key, count, value);
+    }
+
+    /**
+     * ========== Geo（地理位置）操作 ==========
+     */
+
+    public void addGeoLocation(String key, double longitude, double latitude, String member) {
+        redisTemplate.opsForGeo().add(key, new Point(longitude, latitude), member);
+    }
+
+    public Point getGeoLocation(String key, String member) {
+        List<Point> points = redisTemplate.opsForGeo().position(key, member);
+        return points != null && !points.isEmpty() ? points.get(0) : null;
+    }
+
+    public Distance getGeoDistance(String key, String member1, String member2, Metric unit) {
+        return redisTemplate.opsForGeo().distance(key, member1, member2, unit);
+    }
+
+    public GeoResults<GeoLocation<Object>> getNearbyLocations(String key, double longitude, double latitude, double radius) {
+        Circle circle = new Circle(new Point(longitude, latitude), new Distance(radius, Metrics.KILOMETERS));
+        return redisTemplate.opsForGeo().radius(key, circle);
+    }
+}
+
+```
+	
