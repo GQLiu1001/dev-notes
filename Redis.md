@@ -29,3 +29,4 @@ NoSQL 非关系型数据库
 **特点**：
 - 存储地理坐标（经纬度），支持附近查询。
 - 适用于 LBS（Location-Based Service）场景，如查找附近的商家/用户。
+## SpringDataRedis
