@@ -254,3 +254,4 @@ public class RedisService {
 ![{FBBE47A6-FBAF-4187-AF6B-51C41ADDB937}.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/%7BFBBE47A6-FBAF-4187-AF6B-51C41ADDB937%7D.png)
 ![{0649FA41-E1B0-4322-9CFA-39A36D0B93AC}.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/%7B0649FA41-E1B0-4322-9CFA-39A36D0B93AC%7D.png)
 ![{F5BC0AC8-7462-474B-8508-84C841A1C8EF}.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/%7BF5BC0AC8-7462-474B-8508-84C841A1C8EF%7D.png)
+![{BFB76FF2-E271-4486-82D8-5DB406760C88}.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/%7BBFB76FF2-E271-4486-82D8-5DB406760C88%7D.png)
