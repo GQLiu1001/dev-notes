@@ -248,5 +248,6 @@ public class RedisService {
 缓存大量同时失效 数据库瞬间压力大
 ![{73B985EA-F85E-438E-AC0F-EA224F344212}.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/%7B73B985EA-F85E-438E-AC0F-EA224F344212%7D.png)
 ![{9E3662E3-1EB7-4E87-B403-A2F4222C8FBD}.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/%7B9E3662E3-1EB7-4E87-B403-A2F4222C8FBD%7D.png)
+### 缓存击穿
 
 
