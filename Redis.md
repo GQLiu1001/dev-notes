@@ -244,5 +244,9 @@ public class RedisService {
 是一种算法
 ![{DAA1625D-0985-4D33-B6C8-1FBC87D43A16}.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/%7BDAA1625D-0985-4D33-B6C8-1FBC87D43A16%7D.png)
 ![{E53162E9-F7CE-4B3A-B4BC-C4217F35AF02}.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/%7BE53162E9-F7CE-4B3A-B4BC-C4217F35AF02%7D.png)
+### 缓存雪崩
+缓存大量同时失效 数据库瞬间压力大
+![{73B985EA-F85E-438E-AC0F-EA224F344212}.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/%7B73B985EA-F85E-438E-AC0F-EA224F344212%7D.png)
+![{9E3662E3-1EB7-4E87-B403-A2F4222C8FBD}.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/%7B9E3662E3-1EB7-4E87-B403-A2F4222C8FBD%7D.png)
 
 
