@@ -259,3 +259,13 @@ public class RedisService {
 ![{B54AD49B-2355-4338-A56D-4163E94EFF66}.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/%7BB54AD49B-2355-4338-A56D-4163E94EFF66%7D.png)
 ![{862E6941-DAA7-48F5-ACBB-CB891CC23342}.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/%7B862E6941-DAA7-48F5-ACBB-CB891CC23342%7D.png)
 ![{8B611906-8A5D-4A7E-921A-49F9E571F0FC}.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/%7B8B611906-8A5D-4A7E-921A-49F9E571F0FC%7D.png)
+![image.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/20250311154107339.png)
+```xml
+<!-- https://mvnrepository.com/artifact/org.redisson/redisson -->
+<dependency>
+    <groupId>org.redisson</groupId>
+    <artifactId>redisson</artifactId>
+    <version>3.45.0</version>
+</dependency>
+
+```
