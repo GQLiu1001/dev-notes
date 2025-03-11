@@ -249,5 +249,7 @@ public class RedisService {
 ![{73B985EA-F85E-438E-AC0F-EA224F344212}.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/%7B73B985EA-F85E-438E-AC0F-EA224F344212%7D.png)
 ![{9E3662E3-1EB7-4E87-B403-A2F4222C8FBD}.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/%7B9E3662E3-1EB7-4E87-B403-A2F4222C8FBD%7D.png)
 ### 缓存击穿
+一个热点且耗时长的key突然全过期，大量请求同时涌入
+![{54E4CA46-DE17-46BE-86BF-37010B4AAA29}.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/%7B54E4CA46-DE17-46BE-86BF-37010B4AAA29%7D.png)
 
 
