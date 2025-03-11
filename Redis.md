@@ -255,3 +255,6 @@ public class RedisService {
 ![{0649FA41-E1B0-4322-9CFA-39A36D0B93AC}.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/%7B0649FA41-E1B0-4322-9CFA-39A36D0B93AC%7D.png)
 ![{F5BC0AC8-7462-474B-8508-84C841A1C8EF}.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/%7BF5BC0AC8-7462-474B-8508-84C841A1C8EF%7D.png)
 ![{BFB76FF2-E271-4486-82D8-5DB406760C88}.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/%7BBFB76FF2-E271-4486-82D8-5DB406760C88%7D.png)
+## Redisson分布式锁
+![{B54AD49B-2355-4338-A56D-4163E94EFF66}.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/%7BB54AD49B-2355-4338-A56D-4163E94EFF66%7D.png)
+![{862E6941-DAA7-48F5-ACBB-CB891CC23342}.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/%7B862E6941-DAA7-48F5-ACBB-CB891CC23342%7D.png)
