@@ -231,6 +231,17 @@ public class RedisService {
 | **Set**    | `opsForSet().add(key, value)`                                              | `opsForSet().members(key)`                                                    | `opsForSet().remove(key, value)`  |
 | **ZSet**   | `opsForZSet().add(key, value, score)`                                      | `opsForZSet().reverseRange(key, start, end)`                                  | `opsForZSet().remove(key, value)` |
 | **Geo**    | `opsForGeo().add(key, point, name)`                                        | `opsForGeo().position(key, name)` / `opsForGeo().distance(key, name1, name2)` | `opsForGeo().remove(key, name)`   |
+## Redis问题
+### 缓存穿透
+大量未命中的请求不间断的发出 攻击数据库
+![{410961F1-88E3-4DA2-8E68-10283835BDC0}.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/%7B410961F1-88E3-4DA2-8E68-10283835BDC0%7D.png)
 
+#### 缓存空对象
+缓存null 加上 ttl
+![{AA4EB69F-4337-41F4-A35E-35E6A05650CE}.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/%7BAA4EB69F-4337-41F4-A35E-35E6A05650CE%7D.png)
+
+#### 布隆过滤
+是一种算法
+![{DAA1625D-0985-4D33-B6C8-1FBC87D43A16}.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/%7BDAA1625D-0985-4D33-B6C8-1FBC87D43A16%7D.png)
 
 
