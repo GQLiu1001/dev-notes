@@ -269,3 +269,4 @@ public class RedisService {
 </dependency>
 
 ```
+![](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/%7B6920F37B-1E24-4DA2-9D34-3A9848A64873%7D.png)
