@@ -252,5 +252,5 @@ public class RedisService {
 一个热点key且重建耗时长突然全过期，大量请求同时涌入
 ![{54E4CA46-DE17-46BE-86BF-37010B4AAA29}.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/%7B54E4CA46-DE17-46BE-86BF-37010B4AAA29%7D.png)
 ![{FBBE47A6-FBAF-4187-AF6B-51C41ADDB937}.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/%7BFBBE47A6-FBAF-4187-AF6B-51C41ADDB937%7D.png)
-
-
+![{0649FA41-E1B0-4322-9CFA-39A36D0B93AC}.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/%7B0649FA41-E1B0-4322-9CFA-39A36D0B93AC%7D.png)
+![{F5BC0AC8-7462-474B-8508-84C841A1C8EF}.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/%7BF5BC0AC8-7462-474B-8508-84C841A1C8EF%7D.png)
