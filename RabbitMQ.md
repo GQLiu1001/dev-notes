@@ -13,3 +13,10 @@
 ## SpringAMQP
 SpringAmqp的官方地址：
 [Spring AMQP](https://spring.io/projects/spring-amqp)
+```xml
+<dependency>
+  <groupId>org.springframework.amqp</groupId>
+  <artifactId>spring-rabbit</artifactId>
+  <version>3.2.3</version>
+</dependency>
+```
