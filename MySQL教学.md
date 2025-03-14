@@ -6,3 +6,7 @@
 ![image.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/imgPc/20250314103255.png)
 ![image.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/imgPc/20250314103510.png)
 ![image.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/imgPc/20250314103554.png)
+![image.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/imgPc/20250314103846.png)
+![image.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/imgPc/20250314103905.png)
+![image.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/imgPc/20250314103915.png)
+![image.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/imgPc/20250314103940.png)
