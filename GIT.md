@@ -108,4 +108,13 @@ Obisidian
 ![{34E6CC6A-1824-4335-80E7-E31CF4072C17}.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/%7B34E6CC6A-1824-4335-80E7-E31CF4072C17%7D.png)
 
 
-test
+vscode443错误
+找到vpn代理端口 7897
+设置
+```bash
+git config --global http.proxy http://127.0.0.1:7897
+git config --global https.proxy http://127.0.0.1:7897
+git config --global -l
+
+ipconfig /flushdns
+```
