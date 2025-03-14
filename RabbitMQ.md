@@ -265,3 +265,5 @@ public void listenSimpleQueueMessage(Map<String, Object> msg) throws Interrupted
     System.out.println("消费者接收到object.queue消息：【" + msg + "】");
 }
 ```
+
+![image.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/20250314082326894.png)
