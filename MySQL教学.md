@@ -36,6 +36,6 @@
 ![image.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/20250317162140999.png)
 ![image.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/20250317162324949.png)
 左外连接的左表是from的那一个表
-
+左外就是把左表做表作为主表，右外就是把右表作为主表
 
 
