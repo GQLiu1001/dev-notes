@@ -14,4 +14,6 @@
 ![image.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/20250317130719102.png)
 ![image.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/20250317130952650.png)
 ![image.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/20250317131031817.png)
-![image.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/20250317131227910.png)
+![image.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/20250317131412029.png)
+![image.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/20250317131511321.png)
+
