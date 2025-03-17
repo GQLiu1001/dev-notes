@@ -35,6 +35,7 @@
 ![image.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/20250317141017233.png)
 ![image.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/20250317162140999.png)
 ![image.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/20250317162324949.png)
+左外连接的左表是from的那一个表
 
 
 
