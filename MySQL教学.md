@@ -39,6 +39,14 @@
 左外就是把左表做表作为主表，右外就是把右表作为主表
 ![image.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/20250317163102906.png)
 ![image.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/20250317163120666.png)
+![image.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/20250317163321513.png)
+![image.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/20250317163338267.png)
+![image.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/20250317163435265.png)
+![image.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/20250317163528480.png)
+	![image.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/20250317163609657.png)
+![image.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/20250317163707730.png)
+![image.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/20250317163741348.png)
+
 
 
 
