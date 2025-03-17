@@ -19,5 +19,6 @@
 ![image.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/20250317131800413.png)
 ![image.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/20250317132350692.png)
 所有的null值不参与聚合函数运算![image.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/20250317132540634.png)
+![image.png](https://raw.githubusercontent.com/GQLiu1001/mytc/master/img/20250317132942334.png)
 
 
