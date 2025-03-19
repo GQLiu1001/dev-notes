@@ -1,6 +1,6 @@
 # GIT
 
-一键运行111
+一键运行111222
 
 ```bash
 git add . && git commit -m "dev-note" && git push -u origin main
