@@ -571,11 +571,7 @@ toLng: 终点经度
         "id": 1,
         "name": "张三",
         "phone": "13800138000",
-        "status": 1,
-        "license_number": "123456789012345678",
-        "vehicle_type": "小型面包车",
-        "registration_time": "2023-01-01T10:00:00.000Z",
-        "remark": ""
+        "status": 1
       }
     ]
   }
@@ -608,7 +604,6 @@ toLng: 终点经度
     "id": 1,
     "name": "张三",
     "status": 2,
-    "approval_time": "2023-03-15T15:30:00.000Z"
   }
 }
 ```
@@ -631,40 +626,24 @@ toLng: 终点经度
 
 ### 7.2 订单派送模块API
 
-#### 7.2.1 获取订单列表
-
-- **接口路径**: `/api/admin/delivery/orders`
-- **请求方式**: GET
-- **功能说明**: 获取可派送的订单列表
-- **请求参数**: customerPhone: 客户电话(可选)
-page: 页码, 从1开始(可选)
-size: 每页条数(可选)
-
-
-- **响应数据**:
-
 ```json
 {
   "code": 200,
-  "message": "success",
+  "message": "success"
   "data": {
     "items": [
-      {
+      
         "id": 1,
         "order_no": "ORD202303150001",
         "customer_phone": "13900139000",
         "total_amount": 1500.00,
-        "order_create_time": "2023-03-15T10:00:00.000Z",
         "delivery_status": 1,
-        "order_remark": "客户要求下午送达"
       }
     ],
     "total": 10
   }
-}
+}7.2.2 派送订单
 ```
-
-#### 7.2.2 派送订单
 
 - **接口路径**: `/api/admin/delivery/dispatch`
 - **请求方式**: POST
